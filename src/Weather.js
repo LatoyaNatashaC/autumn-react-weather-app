@@ -17,6 +17,27 @@ export default function weather() {
           </div>
         </div>
       </form>
+      <h2>New York</h2>
+      <ul>
+        <li>Saturday 2:08 PM</li>
+        <li>Mostly Cloudy</li>
+      </ul>
+      <div className="row">
+        <div className="col-6">
+          <img
+            src="https://www.gstatic.com/weather/conditions2023/2023.2/svg/cloudy_light.svg"
+            alt="Cloudy"
+          />
+          78ºF | ºC
+        </div>
+        <div className="col-6">
+          <ul>
+            <li>Precepitation: 0% </li>
+            <li>Humidity: 51%</li>
+            <li>Wind: 1 mph</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
