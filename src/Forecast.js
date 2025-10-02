@@ -8,7 +8,9 @@ export default function Forecast() {
           <div className="forecastDay">Sun</div>
           Icon
           <div className="forecastTemperature">
-            <span className="forecastTemperature-max">80º </span>
+            <span className="forecastTemperature-max">
+              <strong>80º </strong>
+            </span>
             <span className="forecastTempreature-min">64º </span>
           </div>
         </div>
@@ -16,7 +18,9 @@ export default function Forecast() {
           <div className="forecastDay">Mon</div>
           Icon
           <div className="forecastTemperature">
-            <span className="forecastTemperature-max">77º </span>
+            <span className="forecastTemperature-max">
+              <strong>77º</strong>{" "}
+            </span>
             <span className="forecastTempreature-min">64º </span>
           </div>
         </div>
@@ -24,7 +28,9 @@ export default function Forecast() {
           <div className="forecastDay">Tue</div>
           Icon
           <div className="forecastTemperature">
-            <span className="forecastTemperature-max">79º </span>
+            <span className="forecastTemperature-max">
+              <strong>79º</strong>{" "}
+            </span>
             <span className="forecastTempreature-min">59º </span>
           </div>
         </div>
@@ -32,7 +38,9 @@ export default function Forecast() {
           <div className="forecastDay">Wed</div>
           Icon
           <div className="forecastTemperature">
-            <span className="forecastTemperature-max">68º </span>
+            <span className="forecastTemperature-max">
+              <strong>68º </strong>
+            </span>
             <span className="forecastTempreature-min">51º </span>
           </div>
         </div>
@@ -40,7 +48,9 @@ export default function Forecast() {
           <div className="forecastDay">Thur</div>
           Icon
           <div className="forecastTemperature">
-            <span className="forecastTemperature-max">64º </span>
+            <span className="forecastTemperature-max">
+              <strong>64º</strong>{" "}
+            </span>
             <span className="forecastTempreature-min">52º </span>
           </div>
         </div>
@@ -48,7 +58,9 @@ export default function Forecast() {
           <div className="forecastDay">Fri</div>
           Icon
           <div className="forecastTemperature">
-            <span className="forecastTemperature-max">68º </span>
+            <span className="forecastTemperature-max">
+              <strong>68º</strong>{" "}
+            </span>
             <span className="forecastTempreature-min">55º </span>
           </div>
         </div>
