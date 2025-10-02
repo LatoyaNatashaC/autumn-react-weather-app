@@ -1,7 +1,7 @@
 import React from "react";
 import "./Weather.css";
 
-export default function weather() {
+export default function Weather() {
   return (
     <div className="weather">
       <form>
