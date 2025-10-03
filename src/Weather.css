@@ -4,3 +4,6 @@
 .weather li {
   list-style: none;
 }
+.weather ul {
+  padding: 0px;
+}
