@@ -29,7 +29,8 @@ export default function Weather() {
             src="https://www.gstatic.com/weather/conditions2023/2023.2/svg/cloudy_light.svg"
             alt="Cloudy"
           />
-          78ºF | ºC
+          <span className="currentTemperature">78</span>{" "}
+          <span className="unit">ºF</span>
         </div>
         <div className="col-6">
           <ul>

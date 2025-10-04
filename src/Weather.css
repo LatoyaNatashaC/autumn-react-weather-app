@@ -1,9 +1,21 @@
 .weather img {
-  max-width: 25%;
+  max-width: 15%;
+  margin-right: 5px;
 }
 .weather li {
   list-style: none;
 }
 .weather ul {
   padding: 0px;
+}
+.currentTemperature {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 70px;
+}
+.unit {
+  position: relative;
+  top: -20px;
+  font-size: 16px;
+  font-weight: 400;
 }
