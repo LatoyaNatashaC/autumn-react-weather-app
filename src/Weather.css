@@ -19,3 +19,9 @@
   font-size: 16px;
   font-weight: 400;
 }
+.weather form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
