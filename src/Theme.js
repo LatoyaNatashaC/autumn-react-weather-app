@@ -4,6 +4,7 @@ import springImg from "./images/spring.png";
 import autumnImg from "./images/autumn.png";
 import winterImg from "./images/winter.png";
 import "./Theme.css";
+import "./App.css";
 
 export default function Theme() {
   return (
