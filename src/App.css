@@ -6,7 +6,3 @@
 .App h1 {
   text-align: center;
 }
-.App .container {
-  background: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
-  border-radius: 20px;
-}
