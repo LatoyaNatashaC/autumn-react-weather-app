@@ -1,20 +1,22 @@
-import React, { useState } from "react";
-import summerImg from "./images/summer.png";
-import springImg from "./images/spring.png";
-import autumnImg from "./images/autumn.png";
-import winterImg from "./images/winter.png";
-import "./Theme.css";
-import "./App.css";
+import React from "react";
 
-export default function Theme() {
+export default function Theme({ season, handleSelection }) {
   return (
-    <div className="selector-box">
-      <select id="seasonSelect">
-        <option value="">Choose a theme...</option>
-        <option value="Spring">Spring 🌸</option>
-        <option value="Summer">Summer 🌤 </option>
-        <option value="Autumn">Autumn 🍁</option>
-        <option value="Winter">Winter ⛄️</option>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        padding: "20px",
+      }}
+    >
+      <select id="seasonSelect" value={season} onChange={handleSelection}>
+        <option value="" disabled>
+          Choose a theme...
+        </option>
+        <option value="spring">spring 🌷</option>
+        <option value="summer">summer 🌤</option>
+        <option value="autumn">autumn 🍁</option>
+        <option value="winter">winter ⛄️</option>
       </select>
     </div>
   );
