@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Weather from "./Weather";
 import Forecast from "./Forecast";
 import Theme from "./Theme";
+import summerImg from "./images/summer.png";
+import springImg from "./images/spring.png";
+import autumnImg from "./images/fall.png";
+import winterImg from "./images/winter.png";
 
 export default function App() {
   return (
