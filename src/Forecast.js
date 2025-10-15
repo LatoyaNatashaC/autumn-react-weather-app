@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Forecast() {
   return (
@@ -9,7 +9,7 @@ export default function Forecast() {
           Icon
           <div className="forecastTemperature">
             <span className="forecastTemperature-max">
-              <strong>80º </strong>
+              <strong>80º </strong>{" "}
             </span>
             <span className="forecastTempreature-min">64º </span>
           </div>
