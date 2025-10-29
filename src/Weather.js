@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
+import DisplayDate from "./DisplayDate";
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -11,7 +12,7 @@ export default function Weather() {
     setWeatherData({
       ready: true,
       city: response.data.name,
-      date: "October 27th",
+      date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       iconUrl:
         "https://www.gstatic.com/weather/conditions/v1/svg/sunny_light.svg",
@@ -40,7 +41,9 @@ export default function Weather() {
         </form>
         <h2 className="mt-3">{weatherData.city}</h2>
         <ul>
-          <li>{weatherData.date}</li>
+          <li>
+            <DisplayDate date={weatherData.date} />
+          </li>
           <li>{weatherData.description}</li>
         </ul>
         <div className="row">
