@@ -5,6 +5,7 @@ import DisplayDate from "./DisplayDate";
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState("Los Angeles");
 
   function handleResponse(response) {
     console.log(response.data);
@@ -22,16 +23,32 @@ export default function Weather() {
     });
   }
 
+  function search() {
+    const apiKey = "203fa770242fcd2b9555d832a88ea567";
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSearch(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="weather">
-        <form>
+        <form onSubmit={handleSearch}>
           <div className="row">
             <div className="col-9">
               <input
                 type="search"
                 placeholder="Enter city"
                 className="form-control"
+                onChange={handleCityChange}
               />
             </div>
             <div className="col-3">
@@ -64,11 +81,7 @@ export default function Weather() {
       </div>
     );
   } else {
-    const apiKey = "203fa770242fcd2b9555d832a88ea567";
-    let city = "Los Angeles";
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return "Loading Weather...";
   }
 }
