@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Weather.css";
 import axios from "axios";
 import DisplayDate from "./DisplayDate";
+import CurrentWeather from "./CurrentWeather";
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -74,10 +75,8 @@ export default function Weather() {
           <div className="clearfix">
             <div className="float-left">
               <img src={weatherData.iconUrl} alt={weatherData.description} />
-              <span className="currentTemperature">
-                {Math.round(weatherData.temperature)}
-              </span>{" "}
-              <span className="unit">ºF</span>
+
+              <CurrentWeather fahrenheit={weatherData.temperature} />
             </div>
           </div>
         </div>
