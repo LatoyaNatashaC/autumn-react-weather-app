@@ -72,12 +72,10 @@ export default function Weather() {
       </ul>
       <div className="row">
         <div className="col-6">
-          <div className="clearfix">
-            <div className="float-left">
-              <img src={weatherData.iconUrl} alt={weatherData.description} />
+          <div className="temperature">
+            <img src={weatherData.iconUrl} alt={weatherData.description} />
 
-              <CurrentWeather fahrenheit={weatherData.temperature} />
-            </div>
+            <CurrentWeather fahrenheit={weatherData.temperature} />
           </div>
         </div>
 
