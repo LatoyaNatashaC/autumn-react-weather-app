@@ -25,3 +25,6 @@
   align-items: center;
   height: 10vh;
 }
+a {
+  text-decoration: none;
+}
