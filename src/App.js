@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import "./App.css";
 import Weather from "./Weather";
-import Forecast from "./Forecast";
 import Theme from "./Theme";
 import summerImg from "./images/summer.png";
 import springImg from "./images/spring.png";
@@ -41,7 +40,6 @@ export default function App() {
         <h1 className="mb-3">Weather Forecast</h1>
 
         <Weather />
-        <Forecast />
       </div>
     </div>
   );
