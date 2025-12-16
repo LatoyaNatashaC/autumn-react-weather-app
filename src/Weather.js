@@ -3,6 +3,8 @@ import "./Weather.css";
 import axios from "axios";
 import DisplayDate from "./DisplayDate";
 import CurrentWeather from "./CurrentWeather";
+import WeatherForecast from "./WeatherForecast";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -17,19 +19,20 @@ export default function Weather() {
 
     setWeatherData({
       ready: true,
-      city: response.data.name,
-      date: new Date(response.data.dt * 1000),
-      temperature: response.data.main.temp,
-      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      description: response.data.weather[0].description,
-      humidity: response.data.main.humidity,
+      coordinates: response.data.coord,
+      city: response.data.city,
+      date: new Date(response.data.time * 1000),
+      temperature: response.data.temperature.current,
+      icon: response.data.condition.icon,
+      description: response.data.condition.description,
+      humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
     });
   }
 
   function search() {
-    const apiKey = "203fa770242fcd2b9555d832a88ea567";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    const apiKey = "4f3b0tf3219b4c7758082d0o48eabbbe";
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -73,7 +76,7 @@ export default function Weather() {
       <div className="row">
         <div className="col-6">
           <div className="temperature">
-            <img src={weatherData.iconUrl} alt={weatherData.description} />
+            <WeatherIcon code={weatherData.icon} size={52} />
 
             <CurrentWeather fahrenheit={weatherData.temperature} />
           </div>
@@ -86,6 +89,10 @@ export default function Weather() {
           </ul>
         </div>
       </div>
+      <WeatherForecast
+        coordinates={weatherData.coordinates}
+        city={weatherData.city}
+      />
     </div>
   );
 }
