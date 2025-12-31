@@ -19,8 +19,8 @@ export default function Weather() {
 
     setWeatherData({
       ready: true,
-      coordinates: response.data.coord,
-      city: response.data.city,
+      coordinates: response.data.coordinates,
+      city: response.data.city.name,
       date: new Date(response.data.time * 1000),
       temperature: response.data.temperature.current,
       icon: response.data.condition.icon,
@@ -84,8 +84,14 @@ export default function Weather() {
 
         <div className="col-6">
           <ul>
-            <li>Humidity:{weatherData.humidity}%</li>
-            <li>Wind:{weatherData.wind} mph</li>
+            <li>
+              Humidity:
+              {weatherData.humidity}%
+            </li>
+            <li>
+              Wind:
+              {weatherData.wind} mph
+            </li>
           </ul>
         </div>
       </div>

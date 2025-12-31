@@ -2,3 +2,9 @@
   opacity: 0.6;
   margin-left: 5px;
 }
+.WeatherForecast-loading {
+  text-align: center;
+  padding: 12px 0;
+  opacity: 0.8;
+  font-size: 14px;
+}
