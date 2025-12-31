@@ -15,7 +15,7 @@ export default function App() {
     autumn: autumnImg,
     winter: winterImg,
   };
-  const [season, setSeason] = useState("autumn");
+  const [season, setSeason] = useState("winter");
 
   function handleSelection(event) {
     const selectedSeason = event.target.value;
