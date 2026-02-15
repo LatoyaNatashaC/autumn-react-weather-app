@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function WeatherIcon({ iconUrl, alt = "", size = 48 }) {
+export default function WeatherIcon({ iconUrl, alt = "", size = 64 }) {
   if (!iconUrl) return null;
 
   return (
@@ -9,7 +9,7 @@ export default function WeatherIcon({ iconUrl, alt = "", size = 48 }) {
       alt={alt}
       width={size}
       Height={size}
-      style={{ verticalAlign: "middle" }}
+      style={{ verticalAlign: "middle", transform: "scale(1.1)" }}
     />
   );
 }

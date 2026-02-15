@@ -82,7 +82,7 @@ export default function Weather() {
             <WeatherIcon
               iconUrl={weatherData.iconUrl}
               alt={weatherData.description}
-              size={52}
+              size={80}
             />
 
             <CurrentWeather fahrenheit={weatherData.temperature} />

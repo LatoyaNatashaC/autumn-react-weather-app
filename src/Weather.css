@@ -1,5 +1,5 @@
 .weather img {
-  max-width: 15%;
+  max-width: 150%;
   margin-right: 5px;
 }
 .weather li {
@@ -31,4 +31,10 @@ a {
 .temperature {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.currentWeather {
+  display: flex;
+  align-items: center;
 }
