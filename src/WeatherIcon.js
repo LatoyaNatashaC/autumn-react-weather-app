@@ -8,7 +8,7 @@ export default function WeatherIcon({ iconUrl, alt = "", size = 64 }) {
       src={iconUrl}
       alt={alt}
       width={size}
-      Height={size}
+      height={size}
       style={{ verticalAlign: "middle", transform: "scale(1.1)" }}
     />
   );
