@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./Weather.css";
 import axios from "axios";
 import DisplayDate from "./DisplayDate";
@@ -9,10 +9,6 @@ import WeatherIcon from "./WeatherIcon";
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState("Los Angeles");
-
-  useEffect(() => {
-    search();
-  }, []);
 
   function handleResponse(response) {
     console.log(response.data);
@@ -31,11 +27,15 @@ export default function Weather() {
     });
   }
 
-  function search() {
+  const search = useCallback(() => {
     const apiKey = "4f3b0tf3219b4c7758082d0o48eabbbe";
     const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
-  }
+  }, [city]);
+
+  useEffect(() => {
+    search();
+  }, [search]);
 
   function handleSearch(event) {
     event.preventDefault();
