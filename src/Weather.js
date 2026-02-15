@@ -24,6 +24,7 @@ export default function Weather() {
       date: new Date(response.data.time * 1000),
       temperature: response.data.temperature.current,
       icon: response.data.condition.icon,
+      iconUrl: response.data.condition.icon_url,
       description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
@@ -48,6 +49,8 @@ export default function Weather() {
   if (!weatherData.ready) {
     return "Loading Weather...";
   }
+
+  console.log("CURRENT condition.icon:", weatherData.icon);
 
   return (
     <div className="weather">
@@ -76,7 +79,11 @@ export default function Weather() {
       <div className="row">
         <div className="col-6">
           <div className="temperature">
-            <WeatherIcon code={weatherData.icon} size={52} />
+            <WeatherIcon
+              iconUrl={weatherData.iconUrl}
+              alt={weatherData.description}
+              size={52}
+            />
 
             <CurrentWeather fahrenheit={weatherData.temperature} />
           </div>
