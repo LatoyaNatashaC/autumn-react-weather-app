@@ -40,6 +40,17 @@ export default function App() {
         <h1 className="mb-3">Weather Forecast</h1>
 
         <Weather />
+
+        <footer className="mt-5">
+          By:{" "}
+          <a
+            href="https://github.com/LatoyaNatashaC"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Latoya
+          </a>
+        </footer>
       </div>
     </div>
   );
