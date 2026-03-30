@@ -13,10 +13,10 @@ export default function Theme({ season, handleSelection }) {
         <option value="" disabled>
           Choose a theme...
         </option>
-        <option value="spring">spring 🌷</option>
-        <option value="summer">summer 🌤</option>
-        <option value="autumn">autumn 🍁</option>
-        <option value="winter">winter ⛄️</option>
+        <option value="spring">Spring 🌷</option>
+        <option value="summer">Summer 🌤</option>
+        <option value="autumn">Autumn 🍁</option>
+        <option value="winter">Winter ⛄️</option>
       </select>
     </div>
   );
